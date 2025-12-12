@@ -7,3 +7,12 @@ Iorate is freely available for public use now. Though this was developed by EMC 
 Use the downloads pages to get a copy to try for yourself. Be sure to read the User Guide.
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
+
+Most recent update is for the Linux version only:
+
+			IORATE Version 3.07 Notes
+Increased max volume size from 4TB to 96TB
+Added --threads=<n> - override device copy count (threads) for all devices
+Added --scale_threads_by=<n> - add <n> threads to all devices for each additional run
+Added  --scale_threads_count=<n> - number of additional runs to perform with scaled threads
+
