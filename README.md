@@ -13,7 +13,7 @@ Most recent update is for the Linux version only:
 			IORATE Version 3.07 Notes
 Increased max volume size from 4TB to 96TB
 
-Allow "reuse" to be 100% - prior above 99% wast not allowed 
+Allow "reuse" to be 100% - prior above 99% was not allowed 
 
 Allow "reuse" to be 1% - prior below 10% was not allowed, if 0% is needed use "random" without reuse 
 
