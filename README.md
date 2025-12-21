@@ -8,6 +8,29 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+
+
+
+			IORATE Version 3.12 Notes
+You can now run iorate in listen mode, ex:
+
+on server1:
+
+./iorate --listen-as-report-host
+
+on server2,3,4,5 ....
+
+./iorate --report-host-name=server1 --retrieve-test-files --stay-up-after-all-runs
+
+server1 will send tests.ior and patterens.ior to server2,3,4,5 ... before running the tests 
+
+once the runs are complete server2,3,4,5 will stay running and wait for server1 to run again 
+
+
+Added  --retrieve-test-files     Fetch tests.ior and patterns.ior from the report host
+
+Added --stay-up-after-all-runs   Loop indefinitely, refreshing config from report host
+
 			IORATE Version 3.11 Notes
 			
 Combined Linux and Windows (Cygwin) code - makefile works on both now 
