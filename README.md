@@ -22,10 +22,11 @@ on server2,3,4,5 ....
 
 ./iorate --report-host-name=server1 --retrieve-test-files --stay-up-after-all-runs
 
-server1 will send tests.ior and patterens.ior to server2,3,4,5 ... before running the tests 
+server1 will send tests.ior and patterns.ior to server2,3,4,5 ... before running the tests 
 
 once the runs are complete server2,3,4,5 will stay running and wait for server1 to run again 
 
+Notice that devices.ior is unique therefore has to be local on each server
 
 Added  --retrieve-test-files     Fetch tests.ior and patterns.ior from the report host
 
