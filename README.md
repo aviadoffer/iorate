@@ -8,7 +8,15 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
-Most recent update is for the Linux version only:
+			IORATE Version 3.11 Notes
+			
+Combined Linux and Windows (Cygwin) code - makefile works on both now 
+
+I/O Dashboard displays improvements - number of threads runnning and CPU util
+
+Added --report-host-name=<host> - send live I/O stats to a central reporting host
+
+Added --listen-as-report-host - act as aggregator; display combined hosts stats
 
 			IORATE Version 3.10 Notes
 	
