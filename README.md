@@ -8,6 +8,26 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+		IORATE Version 3.13 Notes
+
+Reporting server (--listen-as-report-host) now automatically collects CSV
+
+reports from all clients upon run completion, saving them as
+
+<hostname>.iorate.csv.
+
+
+Added support for per-host device configurations. The reporting server can
+
+now serve a specific <hostname>.devices.ior file to a matching client.
+
+Clients running with --retrieve-test-files will prefer this specific
+
+remote device configuration if received; otherwise, they default to the
+
+local devices.ior.
+
+Fixed various compilation warnings and linking errors.
 
 
 
