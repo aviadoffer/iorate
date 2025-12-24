@@ -14,12 +14,12 @@ Reporting server (--listen-as-report-host) now automatically collects CSV
 
 reports from all clients upon run completion, saving them as
 
-<hostname>.iorate.csv.
+\<hostname\>.iorate.csv.
 
 
 Added support for per-host device configurations. The reporting server can
 
-now serve a specific <hostname>.devices.ior file to a matching client.
+now serve a specific \<hostname\>.devices.ior file to a matching client.
 
 Clients running with --retrieve-test-files will prefer this specific
 
