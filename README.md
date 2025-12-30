@@ -10,7 +10,7 @@ This is an attempt to keep it alive since it's a very useful and intutive tool
 
 		IORATE Version 3.15 Notes
 
-Added --install-completion, after running it restart bash and now it will autocomplete the -- options 
+Added --install-completion, after running it restart bash and now it will \<tab\> complete the -- options 
 
 		IORATE Version 3.14 Notes
 
