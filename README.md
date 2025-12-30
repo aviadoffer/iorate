@@ -8,6 +8,10 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+			IORATE Version 3.14 Notes
+
+Added --install-completion, after running it restart bash and now it will autocomplete the -- options 
+
 		IORATE Version 3.14 Notes
 
 Fixed a crash during multiple runs with --retrieve-test-files --stay-up-after-all-runs options
