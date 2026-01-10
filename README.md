@@ -16,13 +16,13 @@ Added Reporting server will now summarize the SVC from all the hosts and save it
 
 Added --no-color to disable color on the Dashboard
 
-Added New logic, if you CTRL-C from the reporting server it will signal the other hosts to stop the run (waitting for the next run if configured)
+Added New logic, if you CTRL-C from the reporting server it will signal the other hosts to stop the run (waiting for the next run if configured)
 
 Added -srr=<host> which is combination of : --stay-up-after-all-runs + --retrieve-test-files + --report-host-name=\<host\>
 
 Fixed --install-completion is no longer an option on Windows (no bash support)
 
-Fixed --help - not dispaying help
+Fixed --help - not displaying help
 			
 		IORATE Version 3.15 Notes
 
