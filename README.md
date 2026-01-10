@@ -8,6 +8,22 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+		IORATE Version 3.16 Notes
+			
+Added color to the Dashboard
+
+Added Reporting server will now summarize the SVC from all the hosts and save it under all-hosts.csv (make sure all clocks/time zones are synced)
+
+Added --no-color to disable color on the Dashboard
+
+Added New logic, if you CTRL-C from the reporting server it will signal the other hosts to stop the run (waitting for the next run if configured)
+
+Added -srr=<host> which is combination of : --stay-up-after-all-runs + --retrieve-test-files + --report-host-name=\<host\>
+
+Fixed --install-completion is no longer an option on Windows (no bash support)
+
+Fixed --help - not dispaying help
+			
 		IORATE Version 3.15 Notes
 
 Added --install-completion, after running it restart bash and now it will \<tab\> complete the -- options 
