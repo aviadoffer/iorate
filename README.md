@@ -12,7 +12,7 @@ This is an attempt to keep it alive since it's a very useful and intutive tool
 			
 Added color to the Dashboard
 
-Added Reporting server will now summarize the SVC from all the hosts and save it under all-hosts.csv (make sure all clocks/time zones are synced)
+Added Reporting server will now summarize the CSV from all the hosts and save it under all-hosts.csv (make sure all clocks/time zones are synced)
 
 Added --no-color to disable color on the Dashboard
 
