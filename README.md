@@ -8,7 +8,7 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
-			IORATE Version 3.17 Notes
+		IORATE Version 3.17 Notes
 			
 Fixed Few dispaly issues after termination (including CTRL-C)
 
