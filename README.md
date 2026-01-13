@@ -8,6 +8,14 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+			IORATE Version 3.17 Notes
+			
+Fixed Few dispaly issues after termination (including CTRL-C)
+
+Fixed Dashboard display issue with very large IOPS (>1M)
+
+Fixed a very very old issue where iorate will fail if there is no empty line at the end of .ior file/s
+
 		IORATE Version 3.16 Notes
 			
 Added color to the Dashboard
