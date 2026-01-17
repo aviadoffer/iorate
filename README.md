@@ -8,6 +8,14 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+			IORATE Version 3.18 Notes
+			
+Added --list-connected-clients - Listen for client connections to verify connectivity. The clients can run --report-host-name=\<host\> or --srr=\<host\>
+
+Added --realistic-io  - Enable realistic I/O with fluctuating IOPS		
+
+Added --realistic-io-fluctuation=<%n> -  Fluctuation percentage for realistic I/O (default 15%)
+
 		IORATE Version 3.17 Notes
 			
 Fixed Few dispaly issues after termination (including CTRL-C)
