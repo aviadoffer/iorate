@@ -8,6 +8,13 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+
+			IORATE Version 3.19 Notes
+
+Fixed Support for AIX, now supporting AIX against rhdisk 
+
+Fixed All compliation warnings are not cleare
+
 			IORATE Version 3.18 Notes
 			
 Added --list-connected-clients - Listen for client connections to verify connectivity. The clients can run --report-host-name=\<host\> or --srr=\<host\>
