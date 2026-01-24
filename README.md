@@ -13,7 +13,7 @@ This is an attempt to keep it alive since it's a very useful and intutive tool
 
 Fixed Support for AIX, now supporting AIX against rhdisk 
 
-Fixed All compliation warnings are not cleare
+Fixed All compliation warnings are now cleared
 
 			IORATE Version 3.18 Notes
 			
