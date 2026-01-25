@@ -8,25 +8,26 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
-	IORATE Version 3.20 Notes
+
+		IORATE Version 3.20 Notes
 
 Added --compressible_ratio=<x>. When set, iorate will try to generate
 		
-		write data that is approximately x:1 compressible. The generator works
+write data that is approximately x:1 compressible. The generator works
 		
-		per 4KB chunk: the first bytes are random and the remainder of
+per 4KB chunk: the first bytes are random and the remainder of
 		
-		the chunk is filled with the the same byte. For example, --compressible_ratio=2
+the chunk is filled with the the same byte. For example, --compressible_ratio=2
 		
-		aims for each 4KB to compress to about 2KB.
+aims for each 4KB to compress to about 2KB.
 		
-		This is approximate and depends on the compression algorithm, compression
+This is approximate and depends on the compression algorithm, compression
 		
-		block size, and target storage behavior. If the parameter is not provided,
+block size, and target storage behavior. If the parameter is not provided,
 		
-		iorate uses its traditional fully random write data (with a small historical
+iorate uses its traditional fully random write data (with a small historical
 		
-		header for validation).
+header for validation).
 		
 
 			IORATE Version 3.19 Notes
