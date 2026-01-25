@@ -11,7 +11,7 @@ This is an attempt to keep it alive since it's a very useful and intutive tool
 
 		IORATE Version 3.20 Notes
 
-Added --compressible_ratio=<x>. When set, iorate will try to generate
+Added --compressible_ratio=\<x\>. When set, iorate will try to generate
 		
 write data that is approximately x:1 compressible. The generator works
 		
