@@ -14,11 +14,11 @@ Deprecated --stay-up-after-all-runs; it is now the default when using --report-h
 
 Fixed: passing --srr without a report server name no longer crashes.
 
-Added: when --threads is passed, the dashboard shows
+Added: when --threads is passed, the dashboard 
 
-    "You can press +/- keys to increase/decrease number of running threads"
+"You can press +/- keys to increase/decrease number of running threads"
 	
-	The change is applied dynamically and propagated to all remote hosts.
+The change is applied dynamically and propagated to all remote hosts.
 	   
 			IORATE Version 3.20 Notes
 
