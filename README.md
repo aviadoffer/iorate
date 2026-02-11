@@ -17,10 +17,10 @@ Fixed: passing --srr without a report server name no longer crashes.
 Added: when --threads is passed, the dashboard shows
 
 	   "You can press +/- keys to increase/decrease number of running threads"
-       
-	   The change is applied dynamically and propagated to all remote hosts.
+        
+		The change is applied dynamically and propagated to all remote hosts.
 	   
-		IORATE Version 3.20 Notes
+			IORATE Version 3.20 Notes
 
 Added --compressible_ratio=\<x\>. When set, iorate will try to generate
 		
