@@ -8,7 +8,19 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+            IORATE Version 3.21 Notes
 
+Deprecated --stay-up-after-all-runs; it is now the default when using --report-host-name (passing it is ignored).
+
+Fixed: passing --srr without a report server name no longer crashes.
+
+Added: when --threads is passed, the dashboard shows
+
+	   \"You can press +/- keys to increase/decrease number of running threads\"
+       
+	   The change is applied dynamically and propagated to all remote hosts.
+
+	   
 		IORATE Version 3.20 Notes
 
 Added --compressible_ratio=\<x\>. When set, iorate will try to generate
