@@ -8,6 +8,51 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+			IORATE Version 3.22 Notes
+
+Added --dedup-ratio=<x>  Generates dedupable write data at x:1 dedup ratio.
+    The write buffer is divided into dedup-block-size chunks.  For a ratio
+    of X:1, every X consecutive chunks on disk share the same byte content,
+    so the storage array's dedup engine will detect real, byte-identical
+    duplicates across different LBA ranges.
+
+Added --dedup-block-size=<nK>  Sets the dedup block granularity in KB
+    (default 4).  Must be a power of 2.  Different storage arrays use
+    different dedup granularity; set this to match your target array:
+
+        Array / Platform            Dedup Block Size    Example
+        ---------------------------------------------------------------
+        Pure Storage FlashArray     4K                  --dedup-block-size=4
+        Dell XtremIO                8K                  --dedup-block-size=8
+        NetApp AFF / ONTAP          4K                  --dedup-block-size=4
+        HPE Primera / Alletra       8K                  --dedup-block-size=8
+        Dell PowerStore             4K                  --dedup-block-size=4
+        EMC VMAX/PowerMax          128K                 --dedup-block-size=128
+        Huawei OceanStor            8K                  --dedup-block-size=8
+        IBM FlashSystem             8K                  --dedup-block-size=8
+
+    Dedup and compression are fully composable.  When both are enabled the
+    unique blocks are themselves filled with compressible data, simulating
+    arrays that perform both inline dedup and compression.
+
+    Examples:
+
+        # Pure Storage FlashArray - 4:1 dedup, 4K blocks (default)
+        ./iorate --dedup-ratio=4 -f devices.ior -p patterns.ior -t tests.ior
+
+        # Dell XtremIO - 3:1 dedup, 8K blocks
+        ./iorate --dedup-ratio=3 --dedup-block-size=8
+
+        # Pure + compression combo - 4:1 dedup + 2:1 compression
+        ./iorate --dedup-ratio=4 --compressible_ratio=2
+
+        # NetApp ONTAP - 2:1 dedup + 3:1 compression
+        ./iorate --dedup-ratio=2 --dedup-block-size=4 --compressible_ratio=3
+
+        # EMC VMAX/PowerMax - large 128K dedup blocks
+        ./iorate --dedup-ratio=2 --dedup-block-size=128
+
+
             IORATE Version 3.21 Notes
 
 Deprecated --stay-up-after-all-runs; it is now the default when using --report-host-name (passing it is ignored).
