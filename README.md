@@ -74,7 +74,7 @@ Added --realistic-io-fluctuation=<%n> -  Fluctuation percentage for realistic I/
 
 		IORATE Version 3.17 Notes
 			
-Fixed Few dispaly issues after termination (including CTRL-C)
+Fixed Few display issues after termination (including CTRL-C)
 
 Fixed Dashboard display issue with very large IOPS (>1M)
 
