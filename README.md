@@ -8,6 +8,37 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+## Quick Start Guide
+
+This quick start example demonstrates how to configure and run a simple mixed random workload: **8K block size, 70% read, and 30% write**. 
+
+To get started, you need to create three simple configuration files in your working directory:
+
+### 1. `devices.ior`
+Define your target storage device and thread count (e.g., one device with one thread).
+```text
+Device = "/dev/mapper/mpathXXX" count 1 capacity 100GB offset 64KB;
+```
+
+### 2. `patterns.ior`
+Define the I/O sizes and access patterns.
+```text
+Pattern 1 = "8K Random Read" io size 8KB random read;
+Pattern 2 = "8K Random Write" io size 8KB random write;
+```
+
+### 3. `tests.ior`
+Define the test duration and the ratio of the patterns you defined above.
+```text
+Test 1 = "Example 70/30 8K random" for 5 min 70% pat 1, 30% pat 2;
+```
+
+### 4. Run
+Once your configuration files are ready, simply run the executable:
+```bash
+./iorate
+```
+
 			IORATE Version 3.22 Notes
 
 Added --dedup-ratio=<x>  Generates dedupable write data at x:1 dedup ratio.
