@@ -39,6 +39,8 @@ Once your configuration files are ready, simply run the executable:
 ./iorate
 ```
 
+## Release notes
+
 			IORATE Version 3.22 Notes
 
 Added --dedup-ratio=<x>  Generates dedupable write data at x:1 dedup ratio.
