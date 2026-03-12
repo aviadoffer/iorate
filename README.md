@@ -40,6 +40,37 @@ Once your configuration files are ready, simply run the executable:
 ```
 
 ## Release notes
+			IORATE Version 3.23 Notes
+
+Added metadata for NAS benchmarking support.  IORATE can now measure
+    metadata operation rates against directory-based devices (e.g. NFS
+    mounts, local filesystems) in addition to traditional block I/O.
+
+New pattern keywords for metadata operations in pattern.ior :
+
+	Pattern 1 = "NFS meta stat" stat ;
+	Pattern 2 = "NFS meta open_close" openclose ;
+	Pattern 3 = "NFS meta readdir" readdir ;
+	Pattern 4 = "NFS meta mix (33% of each of the above)" meta ;
+
+Directory devices:  When a device name points to a directory path,
+    iorate automatically scans the tree (up to depth 100) and builds
+    internal file/directory lists for metadata operations.  Example:
+
+    Device = "/mnt/aviadsmb" count 1 ;
+
+Mixed meta + I/O tests:  A single test can combine metadata patterns
+    with traditional I/O patterns.  When running against a directory
+    device, I/O patterns perform file-based reads/writes against random
+    files found during the scan. careful with writes!!
+
+Real-time dashboard:  The dashboard displays metadata OPS and average
+    latency per operation type (stat, openclose, readdir).  Mixed tests
+    show both metadata OPS and traditional Read/Write IOPS.
+
+CSV output:  Metadata statistics are included in the .csv output file
+    with columns for each operation type's OPS and latency.
+
 
 			IORATE Version 3.22 Notes
 
