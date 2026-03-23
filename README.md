@@ -50,12 +50,11 @@ Added UNMAP pattern operation support in patterns.ior.
 	Example:
 		Pattern 1 = "8K random unmap" io size 8KB random unmap;
 
-	Real-time I/O dashboard and end-of-test summaries now display UNMAP
-	operations 
+Real-time I/O dashboard and end-of-test summaries now display UNMAP operations 
 	
-	No AIX Support for unmap. Only Linux and Windows 
+No AIX Support for unmap. Only Linux and Windows 
 
-Mixed Random profiles between different threads are more accurate now 
+Fixed Mixed Random profiles between different threads are more accurate now 
 
 			IORATE Version 3.23 Notes
 
