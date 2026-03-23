@@ -40,6 +40,23 @@ Once your configuration files are ready, simply run the executable:
 ```
 
 ## Release notes
+
+			IORATE Version 3.24 Notes
+
+Added UNMAP pattern operation support in patterns.ior.
+	UNMAP can now be used as a pattern operation similar to read/write,
+	and works with both random and sequential positioning logic.
+
+	Example:
+		Pattern 1 = "8K random unmap" io size 8KB random unmap;
+
+	Real-time I/O dashboard and end-of-test summaries now display UNMAP
+	operations 
+	
+	No AIX Support for unmap. Only Linux and Windows 
+
+Rixed Random profiles between different threads are more accurate now 
+
 			IORATE Version 3.23 Notes
 
 Added metadata for NAS benchmarking support.  IORATE can now measure
