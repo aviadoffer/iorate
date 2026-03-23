@@ -55,7 +55,7 @@ Added UNMAP pattern operation support in patterns.ior.
 	
 	No AIX Support for unmap. Only Linux and Windows 
 
-Rixed Random profiles between different threads are more accurate now 
+Mixed Random profiles between different threads are more accurate now 
 
 			IORATE Version 3.23 Notes
 
