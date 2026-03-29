@@ -8,6 +8,8 @@ Use the downloads pages to get a copy to try for yourself. Be sure to read the U
 
 This is an attempt to keep it alive since it's a very useful and intutive tool
 
+iorate now supports: block storage (SAN and local), local filesystem, NFS storage and S3 storage 
+
 ## Quick Start Guide
 
 This quick start example demonstrates how to configure and run a simple mixed random workload: **8K block size, 70% read, and 30% write**. 
