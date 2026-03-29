@@ -41,6 +41,30 @@ Once your configuration files are ready, simply run the executable:
 
 ## Release notes
 
+
+			IORATE Version 3.25 Notes
+
+Added S3 object storage support. IORATE can now benchmark PUT, GET and ENUM
+operations against S3-compatible endpoints.
+
+New device configuration keywords in devices.ior:
+        Device = "https://s3.example.com" count 1 access-key KEY secret-key SEC_KEY bucket BUCKET;
+
+New pattern keywords for S3 operations in patterns.ior:
+
+        Pattern 1 = "S3 put" io size 8KB put;
+		
+        Pattern 2 = "S3 get" get;
+		
+		Pattern 3 = "S3 enum" enum;
+
+For S3 GET and ENUM, io size is optional. If you don't specify size for GET it will get the entire object
+IF you don't have objets in the bucket, run iorate with PUT first to create some objects
+iorate will only ENUM up to 1M objects 
+
+Note: Building iorate from source now requires linking against libcurl and openssl headers
+(e.g., `-lcurl -lcrypto -lssl -lz`). Depending on OS, install libcurl-devel and openssl-devel.
+
 			IORATE Version 3.24 Notes
 
 Added UNMAP pattern operation support in patterns.ior.
