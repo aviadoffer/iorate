@@ -61,7 +61,9 @@ New pattern keywords for S3 operations in patterns.ior:
 		Pattern 3 = "S3 enum" enum;
 
 For S3 GET and ENUM, io size is optional. If you don't specify size for GET it will get the entire object
-IF you don't have objets in the bucket, run iorate with PUT first to create some objects
+
+If you don't have any objets in the bucket, run iorate with PUT first to create objects.
+
 iorate will only ENUM up to 1M objects 
 
 Note: Building iorate from source now requires linking against libcurl and openssl headers
