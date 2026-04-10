@@ -42,8 +42,37 @@ Once your configuration files are ready, simply run the executable:
 ```
 
 ## Release notes
+	IORATE Version 3.26 Notes
 
+Added blocking UNMAP support in patterns.ior.
+	You can now define a blocking UNMAP pattern such as:
 
+		Pattern 1 = "10MB random unmap" io size 10MB random blocking unmap;
+
+	When a blocking UNMAP runs, iorate remembers the UNMAP locations in an
+	in-memory queue.  Later read/write patterns opportunistically reuse those
+	queued locations when available, helping create storage-level blocking / cache
+	interference scenarios.  If no queued UNMAP locations are available, reads and
+	writes continue with their normal random positioning logic.
+
+	Notes:
+		blocking is only supported together with unmap.
+		The queued UNMAP locations are currently reused by later reads/writes of the
+		same I/O size.
+
+Increased maximum supported I/O size from 4MB to 10MB.
+	This allows larger patterns such as 10MB. This is to support large UNMAP operations  
+
+Added 0.1% resolution for test pattern mix percentages.
+Test pattern weights are no longer limited to whole percentages.
+
+Examples that now work:
+
+   Test 1 = "99.8/0.1/0.1" for 600 second 99.8% pat 1,0.1% pat 2,0.1% pat 3
+
+   Test 2 = "70/29.9/0.1" for 600 second 70% pat 1,29.9% pat 2,0.1% pat 3;
+
+ 
 			IORATE Version 3.25 Notes
 
 Added S3 object storage support. IORATE can now benchmark PUT, GET and ENUM
