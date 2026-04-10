@@ -67,11 +67,10 @@ Added 0.1% resolution for test pattern mix percentages.
 Test pattern weights are no longer limited to whole percentages.
 
 Examples that now work:
-
+```text
    Test 1 = "99.8/0.1/0.1" for 600 second 99.8% pat 1,0.1% pat 2,0.1% pat 3
-
    Test 2 = "70/29.9/0.1" for 600 second 70% pat 1,29.9% pat 2,0.1% pat 3;
-
+```
  
 			IORATE Version 3.25 Notes
 
