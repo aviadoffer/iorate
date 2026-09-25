@@ -42,6 +42,29 @@ Once your configuration files are ready, simply run the executable:
 ```
 
 ## Release notes
+
+			IORATE Version 3.28 Notes
+
+Added file device support for NFS metadata operations.
+	When a device in devices.ior points to a file, iorate now prints a warning
+	and uses its parent folder for metadata operations instead of rejecting it.
+	This applies to stat, openclose, readdir, meta and filecreate patterns.
+
+	Example:
+		Device = "/mnt/folder/file1" count 1 ;
+		
+Metadata operations use /mnt/folder as their scan and operation root.
+	Regular I/O continues to use /mnt/folder/file1, including in mixed
+	metadata + I/O tests.  Directory devices retain their existing behavior.
+
+Fixed metadata scans when testing multiple devices.
+	Each metadata worker scans its own device folder instead of reusing
+	the file/directory lists from the last device prepared.
+
+Added filecreate metadata workload.
+    Ex: Pattern 1 = "NFS Filecreate 4K" filecreate io size 4KB;
+
+
 	IORATE Version 3.26 Notes
 
 Added blocking UNMAP support in patterns.ior.
@@ -49,7 +72,7 @@ Added blocking UNMAP support in patterns.ior.
 
 		Pattern 1 = "10MB random unmap" io size 10MB random blocking unmap;
 
-	When a blocking UNMAP runs, iorate remembers the UNMAP locations in an
+When a blocking UNMAP runs, iorate remembers the UNMAP locations in an
 	in-memory queue.  Later read/write patterns opportunistically reuse those
 	queued locations when available, helping create storage-level blocking / cache
 	interference scenarios.  If no queued UNMAP locations are available, reads and
