@@ -41,6 +41,17 @@ Once your configuration files are ready, simply run the executable:
 ./iorate
 ```
 
+
+### NOTE:
+If you get the error below:
+```text
+ 	iorate cannot start: missing libssl.so.1.1
+```
+On RHEL 9, install the compatibility libraries:
+    sudo dnf install compat-openssl11
+Then run iorate again.
+
+
 ## Release notes
 
 			IORATE Version 3.28 Notes
