@@ -53,6 +53,24 @@ Then run iorate again.
 
 
 ## Release notes
+						IORATE Version 3.29 Notes
+
+Fixed report-host STOP handling for remote clients.
+	Ctrl-C on --listen-as-report-host now cancels all remaining tests
+	and thread-scaling runs in the current cycle on --srr clients,
+	instead of advancing to the next test.  Clients stay up to reconnect
+	when the report host returns.
+
+	The report host keeps its command socket open while collecting final
+	reports and sends STOP to known clients even if their dashboard
+	statistics have timed out.  Known client addresses are retained
+	across report-host scaling runs.
+
+Reduced the pause before checking for new configuration after a run cycle
+	from 10 seconds to 1 second.
+
+Fixed Cygwin compilation of metadata worker cleanup.
+	Include the standard library header so free() is declared explicitly.
 
 			IORATE Version 3.28 Notes
 
