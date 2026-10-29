@@ -60,7 +60,6 @@ Fixed report-host STOP handling for remote clients.
 	and thread-scaling runs in the current cycle on --srr clients,
 	instead of advancing to the next test.  Clients stay up to reconnect
 	when the report host returns.
-
 	The report host keeps its command socket open while collecting final
 	reports and sends STOP to known clients even if their dashboard
 	statistics have timed out.  Known client addresses are retained
