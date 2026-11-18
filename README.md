@@ -64,7 +64,7 @@ Added queuedepth to devices.ior for Linux block and regular file I/O.
 	for blocking I/O. Higher values use Linux native AIO for reads and
 	writes. The device limit is count multiplied by queuedepth.
 ```text
-		Device = "/dev/mapper/mathxxxx" count 2 queuedepth 7 read only;
+		Device = "/dev/mapper/mathxxxx" count 2 queuedepth 7;
 ```
 
 Added --queuedepth=<n> to override device-file queue depths.
