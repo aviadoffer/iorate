@@ -56,6 +56,27 @@ Then run iorate again.
 
 ## Release notes
 
+
+### IORATE Version 3.30 Notes
+
+Added queuedepth to devices.ior for Linux block and regular file I/O.
+	It sets the maximum outstanding requests per worker and defaults to 1
+	for blocking I/O. Higher values use Linux native AIO for reads and
+	writes. The device limit is count multiplied by queuedepth.
+```text
+		Device = "/dev/mapper/mathxxxx" count 2 queuedepth 7 read only;
+```
+
+Added --queuedepth=<n> to override device-file queue depths.
+	A report host forwards the override to updated clients that fetch
+	configuration, including clients with their own device files.
+
+Added --max_devices=<n> with --maxdevices=<n> as an alias.
+	The limit selects devices in file order and is forwarded to clients
+	that fetch configuration from the report host.
+
+Improved performance by reducing logging in the I/O path
+
 ### IORATE Version 3.29 Notes
 
 Fixed report-host STOP handling for remote clients.
